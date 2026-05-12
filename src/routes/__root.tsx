@@ -80,6 +80,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "منصة التحول الرقمي - محافظة نينوى" },
+      { name: "twitter:description", content: "منصة موحدة لإدارة معاملات وأرشفة وموارد محافظة نينوى" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/10dd18d6-9a1d-4f74-ad63-ffc192a7c7fb" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/10dd18d6-9a1d-4f74-ad63-ffc192a7c7fb" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
