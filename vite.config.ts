@@ -11,8 +11,11 @@ import netlify from "@netlify/vite-plugin-tanstack-start";
 // @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
 export default defineConfig({
   cloudflare: false,
-  plugins: [netlify()],
+  plugins: process.env.GITHUB_PAGES === "true" ? [] : [netlify()],
   tanstackStart: {
     server: { entry: "server" },
+  },
+  vite: {
+    base: process.env.GITHUB_PAGES === "true" ? "/nineveh-digital-hub/" : "/",
   },
 });
