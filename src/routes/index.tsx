@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
 });
 
 function LoginPage() {
-  const navigate = useNavigate();
+  const navigate = useNavigate({ from: "/" });
   const [loading, setLoading] = useState(false);
 
   const submit = (e: React.FormEvent) => {
