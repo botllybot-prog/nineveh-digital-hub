@@ -30,7 +30,9 @@ export function TopBar({ title }: { title: string }) {
 
       <div className="min-w-0">
         <h1 className="text-base sm:text-lg font-bold text-foreground truncate">{title}</h1>
-        <p className="text-[11px] sm:text-xs text-muted-foreground truncate">منصة التحول الرقمي - محافظة نينوى</p>
+        <p className="text-[11px] sm:text-xs text-muted-foreground truncate">
+          منصة التحول الرقمي - محافظة نينوى
+        </p>
       </div>
 
       <div className="flex-1 max-w-md mx-auto hidden lg:block">
@@ -49,7 +51,12 @@ export function TopBar({ title }: { title: string }) {
           <Bell className="h-5 w-5 text-foreground" />
           <span className="absolute top-1 left-1 h-2 w-2 rounded-full bg-destructive animate-pulse" />
         </Link>
-        <div className="flex items-center gap-2 sm:pr-3 sm:border-r sm:border-border">
+        <button
+          type="button"
+          onClick={onMenuClick}
+          className="flex items-center gap-2 rounded-xl px-2 py-1.5 hover:bg-secondary transition sm:pr-3 sm:border-r sm:border-border"
+          aria-label="فتح القائمة الجانبية"
+        >
           <div className="h-9 w-9 rounded-full bg-gradient-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
             م ن
           </div>
@@ -58,7 +65,7 @@ export function TopBar({ title }: { title: string }) {
             <div className="text-[11px] text-muted-foreground">مكتب المحافظ</div>
           </div>
           <ChevronDown className="hidden sm:block h-4 w-4 text-muted-foreground" />
-        </div>
+        </button>
       </div>
     </header>
   );
